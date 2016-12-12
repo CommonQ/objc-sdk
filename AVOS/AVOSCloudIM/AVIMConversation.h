@@ -34,65 +34,65 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  The ID of the client which the conversation belongs to.
  */
-@property (nonatomic, copy, readonly, nullable) NSString       *clientId;
+@property (nonatomic, copy, nullable) NSString       *clientId;
 
 /**
  *  The ID of the conversation.
  */
-@property (nonatomic, copy, readonly, nullable) NSString       *conversationId;
+@property (nonatomic, copy, nullable) NSString       *conversationId;
 
 /**
  *  The clientId of the conversation creator.
  */
-@property (nonatomic, copy, readonly, nullable) NSString       *creator;
+@property (nonatomic, copy, nullable) NSString       *creator;
 
 /**
  *  The creation time of the conversation.
  */
-@property (nonatomic, strong, readonly, nullable) NSDate       *createAt;
+@property (nonatomic, strong, nullable) NSDate       *createAt;
 
 /**
  *  The last updating time of the conversation. When fields like name, members changes, this time will changes.
  */
-@property (nonatomic, strong, readonly, nullable) NSDate       *updateAt;
+@property (nonatomic, strong, nullable) NSDate       *updateAt;
 
 /**
  *  The send timestamp of the last message in this conversation.
  */
-@property (nonatomic, strong, readonly, nullable) NSDate       *lastMessageAt;
+@property (nonatomic, strong, nullable) NSDate       *lastMessageAt;
 
 /**
  *  The name of this conversation. Can be changed by update:callback: .
  */
-@property (nonatomic, copy, readonly, nullable) NSString     *name;
+@property (nonatomic, copy, nullable) NSString     *name;
 
 /**
  *  The ids of the clients who join the conversation. Can be changed by addMembersWithClientIds:callback: or removeMembersWithClientIds:callback: .
  */
-@property (nonatomic, strong, readonly, nullable) NSArray      *members;
+@property (nonatomic, strong, nullable) NSArray      *members;
 
 /**
  *  The attributes of the conversation. Intend to save any extra data of the conversation.
  *  Can be set when creating the conversation or can be updated by update:callback: .
  */
-@property (nonatomic, strong, readonly, nullable) NSDictionary *attributes;
+@property (nonatomic, strong, nullable) NSDictionary *attributes;
 
 /**
  *  Indicate whether it is a transient conversation. 
  *  @see AVIMConversationOptionTransient
  */
-@property (nonatomic, assign, readonly) BOOL transient;
+@property (nonatomic, assign) BOOL transient;
 
 /**
  *  Muting status. If muted, when you have offline messages, will not receive Apple APNS notification.
  *  Can be changed by muteWithCallback: or unmuteWithCallback:.
  */
-@property (nonatomic, assign, readonly) BOOL muted;
+@property (nonatomic, assign) BOOL muted;
 
 /**
  *  The AVIMClient object which this conversation belongs to.
  */
-@property (nonatomic, weak, readonly, nullable)   AVIMClient   *imClient;
+@property (nonatomic, weak, nullable)   AVIMClient   *imClient;
 
 /**
  * Add custom property for conversation.
